@@ -18,6 +18,8 @@ public class TorpedoStore {
 
   public TorpedoStore(int numberOfTorpedos){
     this.torpedoCount = numberOfTorpedos;
+    //generator needs to be allocated inside of the constructor, because
+    //it is a dynamic allocation
     generator = new Random();
 
     // update failure rate if it was specified in an environment variable
